@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Router Example</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react-router-dom@6.2.1/umd/react-router-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { HashRouter, Routes, Route, Link } = ReactRouterDOM;
+
+        function Home() {
+            return <h2>Home</h2>;
+        }
+
+        function About() {
+            return <h2>About</h2>;
+        }
+
+        function App() {
+            const [temp, setTemp] = React.useState(0);
+            return (
+                <HashRouter>
+                    <div>
+                        <nav>
+                            <ul>
+                                <li><Link to="/home">Home</Link></li>
+                                <li><Link to="/about">About</Link></li>
+                            </ul>
+                        </nav>
+
+                        <Routes>
+                            <Route path="/home" element={<Home />} />
+                            <Route path="/about" element={<About />} />
+                        </Routes>
+                    </div>
+                </HashRouter>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

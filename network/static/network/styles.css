@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+#posts {
+    display: flex;
+    flex-direction: column;
+    margin:50px;
+    flex: 2;
+    position: relative;
+    overflow-y: scroll; 
+    max-height: 100vh;
+}
+
+#content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width:100%;
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px; /* Adjust the margin as needed */
+}
+
+.column > * {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar-custom {
+    background-color: #000000;
+    color: white;
+    border: 1px solid #333;
+}
+
+.follow {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  /* Style for individual follower/following counts */
+  .follow h3 {
+    margin: 0; /* Remove default margin for h3 */
+  }
+
+  /* Adjust the margin for "Following" */
+  .follow h3:nth-child(2) {
+    margin-left: 10%; /* Adjust as needed */
+  }
+
+  .header
+    {
+        display: flex;
+    }
+
+    .customm{
+        border: 1px solid #3498db;
+        background-color: #3498db;
+        color: #fff;
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    
+    .customm:hover {
+        background-color: #2980b9;
+    }
+
+    .image-container {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        max-height: 300px;
+        margin-right: 10px; /* Adjust spacing between images */
+        display: inline-block;
+    }
+
+    .delete-icon {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+    }
+
+    .pfp-container {
+        overflow: hidden;
+        width: 100px; /* Set your desired width */
+        height: 100px; /* Set your desired height */
+    }
+    
+    .circular-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Maintain aspect ratio and cover the container */
+        border-radius: 50%;
+    }
+
+    .searchUserResults {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+.btnd {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: gray;
+  }
+
+.heart-button:hover {
+    color: red !important;
+    }
+
+
+.custom-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Hide the file input */
+input[type="file"] {
+    display: none;
+}
+
+
+/* .mycard > *{
+    cursor: pointer;
+} */
+
+.invis {
+    pointer-events: none;
+}
+
+.invis > *{
+    pointer-events: visible;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    z-index: 1;
+    max-height: 300px; /* Set the maximum height for the dropdown */
+    width: 400px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    display: none; /* Initially hide the dropdown */
+  }
+
+.suggestions {
+    position: absolute;
+    z-index: 0;
+    max-height: 500px; /* Set the maximum height for the dropdown */
+    width: 400px;
+}
+
+.top-right-button {
+    position: absolute; /* Position the button absolutely */
+    top: 10px; /* Distance from the top of the container */
+    right: 10px; /* Distance from the right of the container */
+  }
